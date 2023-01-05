@@ -75,11 +75,12 @@ public class SwiftFlutterAppcenterBundlePlugin: NSObject, FlutterPlugin {
             return
         case "isCrashesEnabled":
             result(MSCrashes.enabled)
+            return
         case "configureCrashes":
             MSCrashes.enabled = call.arguments as! Bool
-            return
         case "isAnalyticsEnabled":
             result(MSAnalytics.enabled)
+            return
         case "configureAnalytics":
             MSAnalytics.enabled = call.arguments as! Bool
         default:
